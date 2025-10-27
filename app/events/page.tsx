@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { getImagePath } from '@/lib/image-path'
 
 // --- TypeScript Type Definition ---
 type EventCategory = "Weekly Meeting" | "Community Service" | "Fundraiser" | "Social Event" | "District Conference"
@@ -137,7 +138,7 @@ export default function EventsPage() {
                   {event.imageUrl && (
                     <div className="relative w-full h-48">
                       <Image
-                        src={event.imageUrl}
+                        src={getImagePath(event.imageUrl)}
                         alt={event.title}
                         fill
                         className="object-cover"

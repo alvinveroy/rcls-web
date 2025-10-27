@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { getImagePath } from '@/lib/image-path'
 
 export default function LatestUpdates() {
   // Get the 3 latest blog posts
@@ -40,7 +41,7 @@ export default function LatestUpdates() {
                   {/* Blog Post Image */}
                   <div className="md:w-1/3 relative h-48 md:h-auto">
                     <Image
-                      src={post.image || "/placeholder.svg"}
+                      src={getImagePath(post.image || "/placeholder.svg")}
                       alt={post.title}
                       fill
                       className="object-cover"

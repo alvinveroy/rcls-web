@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from 'next/image'
+import { getImagePath } from '@/lib/image-path'
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -27,7 +28,7 @@ export default function Hero() {
       {/* Fallback Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people"
+          src={getImagePath("/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people")}
           alt="Community service volunteers"
           fill
           className="object-cover"

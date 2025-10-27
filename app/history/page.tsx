@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { getImagePath } from '@/lib/image-path'
 
 interface Project {
   title: string
@@ -274,7 +275,7 @@ export default function HistoryPage() {
                       <div className="flex items-start gap-6">
                         <div className="relative w-24 h-24 flex-shrink-0">
                           <Image
-                            src={president.image || "/placeholder.svg"}
+                            src={getImagePath(president.image || "/placeholder.svg")}
                             alt={president.name}
                             fill
                             className="rounded-full object-cover"
@@ -317,7 +318,7 @@ export default function HistoryPage() {
             <div className="flex items-center gap-6 mb-6">
               <div className="relative w-24 h-24 flex-shrink-0">
                 <Image
-                  src={selectedPresident?.image || ""}
+                  src={getImagePath(selectedPresident?.image || "")}
                   alt={selectedPresident?.name || ""}
                   fill
                   className="rounded-full object-cover"
@@ -347,7 +348,7 @@ export default function HistoryPage() {
                       {project.image && (
                         <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden">
                           <Image
-                            src={project.image || "/placeholder.svg"}
+                            src={getImagePath(project.image || "/placeholder.svg")}
                             alt={project.title}
                             fill
                             className="object-cover"

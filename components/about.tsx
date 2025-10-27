@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getImagePath } from '@/lib/image-path'
 
 export default function About() {
   return (
@@ -28,7 +29,7 @@ export default function About() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative w-full h-64">
               <Image
-                src="/rotary-club-members-meeting.jpg"
+                src={getImagePath("/rotary-club-members-meeting.jpg")}
                 alt="Club members"
                 fill
                 className="object-cover rounded-lg shadow-lg"
@@ -36,7 +37,7 @@ export default function About() {
             </div>
             <div className="relative w-full h-64">
               <Image
-                src="/community-service-event.jpg"
+                src={getImagePath("/community-service-event.jpg")}
                 alt="Service event"
                 fill
                 className="object-cover rounded-lg shadow-lg"
@@ -44,7 +45,7 @@ export default function About() {
             </div>
             <div className="relative w-full h-64">
               <Image
-                src="/community-volunteers.png"
+                src={getImagePath("/community-volunteers.png")}
                 alt="Volunteers"
                 fill
                 className="object-cover rounded-lg shadow-lg"
@@ -52,7 +53,7 @@ export default function About() {
             </div>
             <div className="relative w-full h-64">
               <Image
-                src="/rotary-club-charity-event.jpg"
+                src={getImagePath("/rotary-club-charity-event.jpg")}
                 alt="Charity event"
                 fill
                 className="object-cover rounded-lg shadow-lg"
