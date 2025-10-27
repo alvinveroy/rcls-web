@@ -8,6 +8,7 @@ import { useSidebar } from "@/hooks/useSidebar"
 import { SidebarProvider } from "@/hooks/useSidebar"
 import MembersSidebar from "@/components/members/sidebar"
 import MembersHeader from "@/components/members/header"
+import { cn } from "@/lib/utils"
 
 function MembersLayoutContent({
   children,
