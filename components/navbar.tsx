@@ -18,12 +18,13 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Events", href: "#events" },
-    { label: "History", href: "#history" },
-    { label: "Get Involved", href: "#get-involved" },
-    { label: "Contact", href: "#footer" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/#about" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Events", href: "/events" },
+    { label: "History", href: "/history" },
+    { label: "News and Updates", href: "/blog" },
+    { label: "Contact", href: "/#footer" },
   ]
 
   return (
@@ -35,12 +36,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-[#01579B] rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">RC</span>
             </div>
             <span className="font-bold text-[#01579B] hidden sm:inline text-sm">Rotary Club of Lucena South</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -66,9 +67,6 @@ export default function Navbar() {
                 Login
               </Button>
             </Link>
-            <Button variant="outline" className="border-[#01579B] text-[#01579B] hover:bg-[#01579B]/5 bg-transparent">
-              Join Us
-            </Button>
             <Button className="bg-[#F7A81B] text-[#01579B] hover:bg-[#F7A81B]/90">Donate</Button>
           </div>
 
@@ -98,9 +96,6 @@ export default function Navbar() {
                   Login
                 </Button>
               </Link>
-              <Button variant="outline" className="w-full border-[#01579B] text-[#01579B] bg-transparent">
-                Join Us
-              </Button>
               <Button className="w-full bg-[#F7A81B] text-[#01579B]">Donate</Button>
             </div>
           </div>

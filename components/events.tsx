@@ -1,5 +1,6 @@
 import { MapPin, Calendar, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Events() {
   const events = [
@@ -84,9 +85,11 @@ export default function Events() {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" className="border-[#01579B] text-[#01579B] hover:bg-[#01579B]/5 bg-transparent">
-            View All Events
-          </Button>
+          <Link href="/events">
+            <Button variant="outline" className="border-[#01579B] text-[#01579B] hover:bg-[#01579B]/5 bg-transparent">
+              View All Events
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

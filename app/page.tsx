@@ -4,10 +4,7 @@ import ImpactStats from "@/components/impact-stats"
 import About from "@/components/about"
 import Projects from "@/components/projects"
 import Events from "@/components/events"
-import History from "@/components/history"
-import GetInvolved from "@/components/get-involved"
-import ImpactStories from "@/components/impact-stories"
-import Newsletter from "@/components/newsletter"
+import LatestUpdates from "@/components/impact-stories"
 import Footer from "@/components/footer"
 
 export default function Home() {
@@ -19,10 +16,7 @@ export default function Home() {
       <About />
       <Projects />
       <Events />
-      <History />
-      <GetInvolved />
-      <ImpactStories />
-      <Newsletter />
+      <LatestUpdates />
       <Footer />
     </main>
   )
