@@ -3,6 +3,7 @@
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -71,19 +72,32 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in"
           style={{ animationDelay: "0.6s" }}
         >
-          <Button
-            size="lg"
-            className="bg-[#F7A81B] text-[#01579B] hover:bg-[#F7A81B]/90 font-bold text-lg px-8 shadow-lg hover:shadow-xl transition-all"
-          >
-            Join Our Club
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 bg-transparent shadow-lg hover:shadow-xl transition-all"
-          >
-            View Our Projects
-          </Button>
+          <Link href="/about">
+            <Button
+              size="lg"
+              className="bg-[#F7A81B] text-[#01579B] hover:bg-[#F7A81B]/90 font-bold text-lg px-8 shadow-lg hover:shadow-xl transition-all"
+            >
+              More Info
+            </Button>
+          </Link>
+          <Link href="#projects">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 bg-transparent shadow-lg hover:shadow-xl transition-all"
+            >
+              View Our Projects
+            </Button>
+          </Link>
+          <Link href="/blog">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 bg-transparent shadow-lg hover:shadow-xl transition-all"
+            >
+              News & Updates
+            </Button>
+          </Link>
         </div>
       </div>
 
