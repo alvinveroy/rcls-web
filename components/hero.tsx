@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from 'next/image'
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -24,14 +25,14 @@ export default function Hero() {
       </video>
 
       {/* Fallback Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people)",
-          backgroundAttachment: "fixed",
-        }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src="/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people"
+          alt="Community service volunteers"
+          fill
+          className="object-cover"
+          style={{ objectPosition: 'center' }}
+        />
         {/* Dark Blue to Transparent Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#01579B]/85 via-[#01579B]/70 to-[#01579B]/40"></div>
       </div>

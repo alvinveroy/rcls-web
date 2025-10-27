@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section id="about" className="py-16 sm:py-24 bg-white">
@@ -24,26 +26,38 @@ export default function About() {
 
           {/* Right Column - Image Grid */}
           <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/rotary-club-members-meeting.jpg"
-              alt="Club members"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/community-service-event.jpg"
-              alt="Service event"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/community-volunteers.png"
-              alt="Volunteers"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/rotary-club-charity-event.jpg"
-              alt="Charity event"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
+            <div className="relative w-full h-64">
+              <Image
+                src="/rotary-club-members-meeting.jpg"
+                alt="Club members"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <Image
+                src="/community-service-event.jpg"
+                alt="Service event"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <Image
+                src="/community-volunteers.png"
+                alt="Volunteers"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="relative w-full h-64">
+              <Image
+                src="/rotary-club-charity-event.jpg"
+                alt="Charity event"
+                fill
+                className="object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
