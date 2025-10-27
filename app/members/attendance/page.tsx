@@ -22,13 +22,13 @@ export default function AttendancePage() {
   const averageHours = totalEvents > 0 ? (totalHours / totalEvents).toFixed(1) : 0
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="p-4 sm:px-6 space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Attendance & Volunteer Hours</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Attendance & Hours</h1>
           <p className="text-muted-foreground mt-2">Track your volunteer activities and hours</p>
         </div>
-        <Button onClick={() => setShowForm(!showForm)} className="gap-2">
+        <Button onClick={() => setShowForm(!showForm)} className="gap-2 w-full sm:w-auto">
           <Plus className="w-4 h-4" />
           Log Attendance
         </Button>
@@ -36,7 +36,7 @@ export default function AttendancePage() {
 
       {showForm && <AttendanceForm onSubmit={handleAddAttendance} onCancel={() => setShowForm(false)} />}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Hours</CardTitle>
@@ -80,17 +80,17 @@ export default function AttendancePage() {
             {attendance.map((record) => (
               <div
                 key={record.id}
-                className="flex items-start justify-between p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors"
+                className="flex flex-col sm:flex-row sm:items-start sm:justify-between p-3 sm:p-4 border border-border rounded-lg hover:bg-muted/50 transition-colors gap-3"
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-semibold text-foreground">{record.eventName}</h4>
+                    <h4 className="font-semibold text-foreground break-words">{record.eventName}</h4>
                     <Badge variant="outline">{record.role}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">Date: {record.eventDate}</p>
                   {record.notes && <p className="text-sm text-muted-foreground mt-2 italic">{record.notes}</p>}
                 </div>
-                <div className="text-right">
+                <div className="text-right sm:text-left">
                   <p className="text-lg font-bold text-foreground">{record.hoursVolunteered}h</p>
                   <p className="text-xs text-muted-foreground">Hours</p>
                 </div>
@@ -105,7 +105,7 @@ export default function AttendancePage() {
           <CardTitle>Volunteer Statistics</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <div>
               <h4 className="font-semibold text-foreground mb-4">Hours by Role</h4>
               <div className="space-y-3">
