@@ -4,6 +4,7 @@ import { useAuth } from "@/hooks/use-auth"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Bell, Settings } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getImagePath } from '@/lib/image-path'
 
 export default function MembersHeader() {
   const { user } = useAuth()
@@ -28,7 +29,7 @@ export default function MembersHeader() {
             <p className="text-xs text-muted-foreground">{user?.position}</p>
           </div>
           <Avatar>
-            <AvatarImage src={user?.avatarUrl || "/placeholder.svg"} />
+            <AvatarImage src={getImagePath(user?.avatarUrl || "/placeholder.svg")} />
             <AvatarFallback>
               {user?.firstName[0]}
               {user?.lastName[0]}

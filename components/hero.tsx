@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from 'next/image'
+import { getImagePath } from '@/lib/image-path'
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -21,13 +22,13 @@ export default function Hero() {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Video Background */}
       <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline>
-        <source src="/community-service-volunteers-helping-people.jpg" type="video/mp4" />
+        <source src={getImagePath("/community-service-volunteers-helping-people.jpg")} type="video/mp4" />
       </video>
 
       {/* Fallback Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people"
+          src={getImagePath("/placeholder.svg?height=1080&width=1920&query=community service volunteers helping people")}
           alt="Community service volunteers"
           fill
           className="object-cover"

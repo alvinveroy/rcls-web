@@ -11,6 +11,7 @@ import Link from "next/link"
 import { mockBlogPosts } from "@/lib/mock-data"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { getImagePath } from '@/lib/image-path'
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -92,7 +93,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative h-80 md:h-full">
                     <Image
-                      src={featuredPost.image || "/placeholder.svg"}
+                      src={getImagePath(featuredPost.image || "/placeholder.svg")}
                       alt={featuredPost.title}
                       fill
                       className="object-cover"
@@ -130,7 +131,7 @@ export default function BlogPage() {
               {otherPosts.map((post) => (
                 <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
                   <div className="relative h-48">
-                    <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+                    <Image src={getImagePath(post.image || "/placeholder.svg")} alt={post.title} fill className="object-cover" />
                   </div>
                   <CardHeader>
                     <Badge className="mb-2 w-fit bg-[#F7A81B] text-[#01579B] hover:bg-[#F7A81B]/90">

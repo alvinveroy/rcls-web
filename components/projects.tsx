@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getImagePath } from '@/lib/image-path'
 
 export default function Projects() {
   const projects = [
@@ -52,7 +53,7 @@ export default function Projects() {
             >
               <div className="relative w-full h-48">
                 <Image 
-                  src={project.image || "/placeholder.svg"} 
+                  src={getImagePath(project.image || "/placeholder.svg")} 
                   alt={project.title} 
                   fill
                   className="object-cover"

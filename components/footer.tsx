@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -32,24 +33,24 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4 text-[#F7A81B]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-white/70 hover:text-[#F7A81B] transition-colors">
+                <Link href="/#about" className="text-white/70 hover:text-[#F7A81B] transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#projects" className="text-white/70 hover:text-[#F7A81B] transition-colors">
+                <Link href="/#projects" className="text-white/70 hover:text-[#F7A81B] transition-colors">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#events" className="text-white/70 hover:text-[#F7A81B] transition-colors">
+                <Link href="/#events" className="text-white/70 hover:text-[#F7A81B] transition-colors">
                   Events
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#get-involved" className="text-white/70 hover:text-[#F7A81B] transition-colors">
+                <Link href="/#get-involved" className="text-white/70 hover:text-[#F7A81B] transition-colors">
                   Get Involved
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
