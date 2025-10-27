@@ -21,8 +21,8 @@ export default function Navbar() {
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
     { label: "Events", href: "#events" },
-    { label: "History", href: "#history" },
-    { label: "Get Involved", href: "#get-involved" },
+    { label: "History", href: "/history" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "#footer" },
   ]
 
@@ -66,9 +66,6 @@ export default function Navbar() {
                 Login
               </Button>
             </Link>
-            <Button variant="outline" className="border-[#01579B] text-[#01579B] hover:bg-[#01579B]/5 bg-transparent">
-              Join Us
-            </Button>
             <Button className="bg-[#F7A81B] text-[#01579B] hover:bg-[#F7A81B]/90">Donate</Button>
           </div>
 
@@ -98,9 +95,6 @@ export default function Navbar() {
                   Login
                 </Button>
               </Link>
-              <Button variant="outline" className="w-full border-[#01579B] text-[#01579B] bg-transparent">
-                Join Us
-              </Button>
               <Button className="w-full bg-[#F7A81B] text-[#01579B]">Donate</Button>
             </div>
           </div>
