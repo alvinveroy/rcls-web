@@ -44,13 +44,13 @@ export default function PaymentsPage() {
   }
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="p-4 sm:px-6 space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Payments Management</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-foreground">Payments Management</h1>
           <p className="text-muted-foreground mt-2">Track and manage your payments</p>
         </div>
-        <Button onClick={() => setShowForm(!showForm)} className="gap-2">
+        <Button onClick={() => setShowForm(!showForm)} className="gap-2 w-full sm:w-auto">
           <Plus className="w-4 h-4" />
           Add Payment
         </Button>
@@ -58,7 +58,7 @@ export default function PaymentsPage() {
 
       {showForm && <PaymentForm onSubmit={handleAddPayment} onCancel={() => setShowForm(false)} />}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Payments</CardTitle>
