@@ -89,15 +89,6 @@ export default function Hero() {
               View Our Projects
             </Button>
           </Link>
-          <Link href="/blog">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 bg-transparent shadow-lg hover:shadow-xl transition-all"
-            >
-              News & Updates
-            </Button>
-          </Link>
         </div>
       </div>
 

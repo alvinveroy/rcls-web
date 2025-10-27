@@ -9,6 +9,8 @@ import { Search, Calendar, User, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { mockBlogPosts } from "@/lib/mock-data"
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -33,6 +35,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <Navbar />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#01579B] to-[#0277BD] py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -177,6 +180,7 @@ export default function BlogPage() {
           </>
         )}
       </div>
+      <Footer />
     </main>
   )
 }
