@@ -46,13 +46,13 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-gray-700 hover:text-[#01579B] transition-colors font-medium text-sm"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -80,14 +80,14 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-gray-200">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="block py-2 text-gray-700 hover:text-[#01579B] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="flex flex-col gap-2 mt-4">
               <Link href="/login" className="w-full">

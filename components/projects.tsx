@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Projects() {
   const projects = [
     {
@@ -48,7 +50,14 @@ export default function Projects() {
               key={index}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="relative w-full h-48">
+                <Image 
+                  src={project.image || "/placeholder.svg"} 
+                  alt={project.title} 
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#01579B] mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
