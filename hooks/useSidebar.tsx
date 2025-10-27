@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState, type ReactNode } from "react"
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
 
 interface SidebarContextType {
   isCollapsed: boolean
@@ -34,8 +34,15 @@ export function SidebarProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  const value = {
+    isCollapsed,
+    isSidebarOpen,
+    isMobile,
+    toggleSidebar,
+  }
+
   return (
-    <SidebarContext.Provider value={{isCollapsed, isSidebarOpen, isMobile, toggleSidebar}}>
+    <SidebarContext.Provider value={value}>
       {children}
     </SidebarContext.Provider>
   )
