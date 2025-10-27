@@ -22,7 +22,7 @@ export default function Hero() {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Video Background */}
       <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline>
-        <source src="/community-service-volunteers-helping-people.jpg" type="video/mp4" />
+        <source src={getImagePath("/community-service-volunteers-helping-people.jpg")} type="video/mp4" />
       </video>
 
       {/* Fallback Background Image */}
