@@ -16,7 +16,7 @@ function MembersLayoutContent({
   children: React.ReactNode
 }) {
   const { isAuthenticated, loading } = useAuth()
-  const { isCollapsed, isSidebarOpen, isMobile } = useSidebar()
+  const { isCollapsed, isSidebarOpen, isMobile, toggleSidebar } = useSidebar()
   const router = useRouter()
 
   if (loading) {
@@ -43,12 +43,7 @@ function MembersLayoutContent({
       {isMobile && isSidebarOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/50 md:hidden"
-          onClick={() => {
-            const sidebar = document.querySelector('aside')
-            if (sidebar) {
-              sidebar.classList.add('-translate-x-full')
-            }
-          }}
+          onClick={toggleSidebar}
         />
       )}
 
