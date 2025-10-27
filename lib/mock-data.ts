@@ -1,0 +1,183 @@
+// Mock data for development and testing
+
+export const mockContributions = [
+  {
+    id: "1",
+    memberId: "1",
+    amount: 500,
+    contributionType: "Donation",
+    description: "Annual membership contribution",
+    contributionDate: "2024-01-15",
+    status: "completed",
+  },
+  {
+    id: "2",
+    memberId: "1",
+    amount: 250,
+    contributionType: "Project Fund",
+    description: "Community outreach program",
+    contributionDate: "2024-02-20",
+    status: "completed",
+  },
+  {
+    id: "3",
+    memberId: "1",
+    amount: 100,
+    contributionType: "Donation",
+    description: "Disaster relief fund",
+    contributionDate: "2024-03-10",
+    status: "pending",
+  },
+]
+
+export const mockPayments = [
+  {
+    id: "1",
+    memberId: "1",
+    amount: 150,
+    paymentType: "Membership Fee",
+    description: "2024 Annual Membership",
+    paymentDate: "2024-01-01",
+    status: "completed",
+    paymentMethod: "Credit Card",
+  },
+  {
+    id: "2",
+    memberId: "1",
+    amount: 50,
+    paymentType: "Event Registration",
+    description: "Annual Gala 2024",
+    paymentDate: "2024-02-15",
+    status: "completed",
+    paymentMethod: "Bank Transfer",
+  },
+]
+
+export const mockMembers = [
+  {
+    id: "1",
+    firstName: "John",
+    lastName: "Doe",
+    email: "john@rotary.com",
+    position: "President",
+    joinDate: "2020-01-15",
+    status: "active",
+    phone: "+63-917-123-4567",
+    bio: "Passionate about community service",
+  },
+  {
+    id: "2",
+    firstName: "Jane",
+    lastName: "Smith",
+    email: "jane@rotary.com",
+    position: "Vice President",
+    joinDate: "2021-06-20",
+    status: "active",
+    phone: "+63-917-234-5678",
+    bio: "Dedicated to making a difference",
+  },
+  {
+    id: "3",
+    firstName: "Robert",
+    lastName: "Johnson",
+    email: "robert@rotary.com",
+    position: "Treasurer",
+    joinDate: "2019-03-10",
+    status: "active",
+    phone: "+63-917-345-6789",
+    bio: "Financial steward of the club",
+  },
+  {
+    id: "4",
+    firstName: "Maria",
+    lastName: "Garcia",
+    email: "maria@rotary.com",
+    position: "Secretary",
+    joinDate: "2022-05-05",
+    status: "active",
+    phone: "+63-917-456-7890",
+    bio: "Keeping our club organized",
+  },
+]
+
+export const mockBlogPosts = [
+  {
+    id: "1",
+    memberId: "1",
+    title: "Our Community Outreach Initiative",
+    slug: "community-outreach-initiative",
+    excerpt: "Learn about our latest community service project",
+    content: "This month, our club launched an ambitious community outreach initiative...",
+    status: "published",
+    publishedAt: "2024-03-15",
+    createdAt: "2024-03-10",
+  },
+  {
+    id: "2",
+    memberId: "2",
+    title: "Volunteer Spotlight: Making a Difference",
+    slug: "volunteer-spotlight",
+    excerpt: "Meet the volunteers who are changing our community",
+    content: "Every week, our dedicated volunteers work tirelessly...",
+    status: "published",
+    publishedAt: "2024-03-08",
+    createdAt: "2024-03-05",
+  },
+]
+
+export const mockProjectReports = [
+  {
+    id: "1",
+    memberId: "1",
+    title: "School Renovation Project",
+    description: "Renovated the local elementary school library",
+    projectDate: "2024-02-20",
+    impactSummary: "Successfully completed library renovation",
+    beneficiariesCount: 250,
+    hoursSpent: 40,
+    status: "published",
+    publishedAt: "2024-02-25",
+  },
+  {
+    id: "2",
+    memberId: "2",
+    title: "Health Awareness Campaign",
+    description: "Conducted health screening and awareness program",
+    projectDate: "2024-03-10",
+    impactSummary: "Screened 150 community members",
+    beneficiariesCount: 150,
+    hoursSpent: 24,
+    status: "published",
+    publishedAt: "2024-03-12",
+  },
+]
+
+export const mockAttendance = [
+  {
+    id: "1",
+    memberId: "1",
+    eventName: "Weekly Club Meeting",
+    eventDate: "2024-03-20",
+    hoursVolunteered: 2,
+    role: "Participant",
+    notes: "Active participation in discussion",
+  },
+  {
+    id: "2",
+    memberId: "1",
+    eventName: "Community Cleanup Drive",
+    eventDate: "2024-03-15",
+    hoursVolunteered: 4,
+    role: "Team Lead",
+    notes: "Led the cleanup team",
+  },
+  {
+    id: "3",
+    memberId: "1",
+    eventName: "Scholarship Award Ceremony",
+    eventDate: "2024-03-10",
+    hoursVolunteered: 3,
+    role: "Volunteer",
+    notes: "Helped with event setup and coordination",
+  },
+]
