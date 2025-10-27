@@ -27,7 +27,7 @@ export default function MembersLayout({
   }
 
   if (!isAuthenticated) {
-    router.push("/members/login")
+    router.push("/login")
     return null
   }
 

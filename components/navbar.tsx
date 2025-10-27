@@ -57,7 +57,7 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/members/login">
+            <Link href="/login">
               <Button
                 variant="outline"
                 className="border-[#01579B] text-[#01579B] hover:bg-[#01579B]/5 bg-transparent gap-2"
@@ -92,7 +92,7 @@ export default function Navbar() {
               </a>
             ))}
             <div className="flex flex-col gap-2 mt-4">
-              <Link href="/members/login" className="w-full">
+              <Link href="/login" className="w-full">
                 <Button variant="outline" className="w-full border-[#01579B] text-[#01579B] bg-transparent gap-2">
                   <LogIn className="w-4 h-4" />
                   Login
