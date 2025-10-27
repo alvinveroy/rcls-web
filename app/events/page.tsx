@@ -2,6 +2,7 @@ import { Calendar, Clock, MapPin, PlusCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 import Link from "next/link"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
@@ -17,6 +18,7 @@ interface RotaryEvent {
   location: string
   description: string
   category: EventCategory
+  imageUrl?: string
   isPast?: boolean
 }
 
@@ -30,6 +32,7 @@ const upcomingEvents: RotaryEvent[] = [
     location: "Grand Ballroom, Downtown Hotel",
     description: "Join us for our biggest fundraising event of the year. All proceeds support local literacy programs.",
     category: "Fundraiser",
+    imageUrl: "/images/events/charity-gala.png",
   },
   {
     id: 2,
@@ -40,6 +43,7 @@ const upcomingEvents: RotaryEvent[] = [
     description:
       "Help us beautify our local park. A great opportunity for service and fellowship. Families are welcome!",
     category: "Community Service",
+    imageUrl: "/images/events/park-cleanup.png",
   },
   {
     id: 3,
@@ -50,6 +54,7 @@ const upcomingEvents: RotaryEvent[] = [
     description:
       "Our weekly meeting features a fascinating talk from Dr. Eva Rostova on the future of artificial intelligence.",
     category: "Weekly Meeting",
+    imageUrl: "/images/events/weekly-meeting.png",
   },
   {
     id: 4,
@@ -59,6 +64,7 @@ const upcomingEvents: RotaryEvent[] = [
     location: "The Golden Oak Brewery",
     description: "A casual social event to celebrate the holiday season with fellow members and friends.",
     category: "Social Event",
+    imageUrl: "/images/events/holiday-social.png",
   },
   {
     id: 5,
@@ -68,6 +74,7 @@ const upcomingEvents: RotaryEvent[] = [
     location: "Seaside Convention Center",
     description: "Connect with Rotarians from across the district, share ideas, and get inspired for the year ahead.",
     category: "District Conference",
+    imageUrl: "/images/events/district-conference.png",
   },
 ]
 
@@ -127,6 +134,17 @@ export default function EventsPage() {
                   key={event.id}
                   className="flex flex-col h-full shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
+                  {event.imageUrl && (
+                    <div className="relative w-full h-48">
+                      <Image
+                        src={event.imageUrl}
+                        alt={event.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="flex justify-between items-start">
                       <CardTitle className="text-xl font-bold text-primary pr-2">{event.title}</CardTitle>
