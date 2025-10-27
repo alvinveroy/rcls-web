@@ -10,7 +10,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Rotary Club of Lucena South",
   description: "Service Above Self - Building Community Through Action",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
