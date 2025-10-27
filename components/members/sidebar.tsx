@@ -46,7 +46,7 @@ export default function MembersSidebar() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-lg">RC</span>
             </div>
-            {!isCollapsed && (
+            {(!isCollapsed || isMobile) && (
               <div className="overflow-hidden">
                 <p className="font-bold text-sidebar-foreground">Rotary Club</p>
                 <p className="text-xs text-sidebar-foreground/60">Lucena South</p>
@@ -70,7 +70,7 @@ export default function MembersSidebar() {
                 )}
               >
                 <Icon className="w-4 h-4 shrink-0" />
-                {!isCollapsed && !isMobile && <span>{item.label}</span>}
+                {(!isCollapsed || isMobile) && <span>{item.label}</span>}
               </Button>
             )
 
@@ -88,7 +88,11 @@ export default function MembersSidebar() {
             }
 
             return (
-              <Link key={item.href} href={item.href}>
+              <Link 
+                key={item.href} 
+                href={item.href}
+                onClick={() => isMobile && toggleSidebar()}
+              >
                 {buttonContent}
               </Link>
             )
@@ -106,26 +110,36 @@ export default function MembersSidebar() {
             </Button>
           )}
           
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                className={cn(
-                  "w-full justify-start gap-3 text-destructive hover:text-destructive hover:bg-destructive/10",
-                  isCollapsed && !isMobile && "justify-center px-2"
-                )}
-                onClick={handleLogout}
-              >
-                <LogOut className="w-4 h-4 shrink-0" />
-                {!isCollapsed && !isMobile && <span>Logout</span>}
-              </Button>
-            </TooltipTrigger>
-            {(isCollapsed && !isMobile) && (
+          {isCollapsed && !isMobile ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "w-full justify-start gap-3 text-destructive hover:text-destructive hover:bg-destructive/10",
+                    "justify-center px-2"
+                  )}
+                  onClick={handleLogout}
+                >
+                  <LogOut className="w-4 h-4 shrink-0" />
+                </Button>
+              </TooltipTrigger>
               <TooltipContent side="right">
                 <p>Logout</p>
               </TooltipContent>
-            )}
-          </Tooltip>
+            </Tooltip>
+          ) : (
+            <Button
+              variant="ghost"
+              className={cn(
+                "w-full justify-start gap-3 text-destructive hover:text-destructive hover:bg-destructive/10"
+              )}
+              onClick={handleLogout}
+            >
+              <LogOut className="w-4 h-4 shrink-0" />
+              <span>Logout</span>
+            </Button>
+          )}
         </div>
       </aside>
     </TooltipProvider>
