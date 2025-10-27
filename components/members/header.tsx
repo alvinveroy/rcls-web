@@ -1,17 +1,28 @@
 "use client"
 
 import { useAuth } from "@/hooks/use-auth"
+import { useSidebar } from "@/hooks/useSidebar"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Bell, Settings } from "lucide-react"
+import { Bell, Settings, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { getImagePath } from '@/lib/image-path'
 
 export default function MembersHeader() {
   const { user } = useAuth()
+  const { toggleSidebar } = useSidebar()
 
   return (
     <header className="bg-card border-b border-border px-6 py-4 flex items-center justify-between">
-      <div>
+      <div className="flex items-center gap-4">
+        <Button
+          variant="outline"
+          size="icon"
+          className="shrink-0 md:hidden"
+          onClick={toggleSidebar}
+          aria-label="Toggle navigation menu"
+        >
+          <Menu className="w-5 h-5" />
+        </Button>
         <h2 className="text-lg font-semibold text-foreground">Members Portal</h2>
       </div>
       <div className="flex items-center gap-4">
