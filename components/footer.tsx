@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-[#F7A81B] rounded-full flex items-center justify-center">
                 <span className="text-[#01579B] font-bold">RC</span>
               </div>
-              <span className="font-bold text-lg">Rotary Club</span>
+              <span className="font-bold text-lg">Rotary Club of Lucena South</span>
             </div>
             <p className="text-white/70 mb-4">Service Above Self - Building Community Through Action</p>
             <div className="flex gap-4">

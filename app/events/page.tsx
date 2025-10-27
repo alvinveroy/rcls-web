@@ -177,28 +177,6 @@ export default function EventsPage() {
           </div>
         </section>
 
-        {/* 4. Call-to-Action Section */}
-        <section id="join-us" className="py-20 bg-[#F7A81B]">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold text-[#01579B]">Ready to Make an Impact?</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-blue-900">
-              Become a part of a global network of volunteers working to make the world a better place.
-            </p>
-            <div className="mt-8 flex justify-center gap-4 flex-wrap">
-              <Button asChild size="lg" className="bg-[#01579B] hover:bg-[#014a81]">
-                <Link href="/membership">Become a Member</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-[#01579B] text-[#01579B] hover:bg-blue-50"
-              >
-                <Link href="#footer">Contact Us</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
